@@ -1,0 +1,51 @@
+<xml xmlns="https://developers.google.com/blockly/xml"><variables><variable type="KIND_SpriteKind" id="iFUB-r[PBaTre8CE^}2F">Player</variable><variable type="KIND_SpriteKind" id="1K{0hBI*?F24+B^(%|ZR">Projectile</variable><variable type="KIND_SpriteKind" id="lOW1h/rbN`S4:41t2-LA">Food</variable><variable type="KIND_SpriteKind" id="b|@YH;D3WsXs)F;m/.tZ">Enemy</variable><variable id="W0s8yd@NWXDE)vw%RpQp">hero</variable><variable id="KE=(:KqUa2CS`5u?)^10">key</variable><variable id="mkl`^xOXtR6vPCL*Rvvj">mySprite</variable></variables><block type="argument_reporter_custom" id="w+;m10XYYrzj9C_EyPtV" disabled="true" x="1690" y="50"><mutation typename="tiles.Location"/><field name="VALUE">location</field></block><block type="pxt-on-start" id="?|Yu((OY^Xha!pzV7|J[" x="210" y="130"><statement name="HANDLER"><block type="tilemap_editor" id="@m?l@5O2^uNL%Y{,bJ8{"><field name="tilemap">tiles.createTilemap(hex`10001000010202080213020802030000000000000f0605070605060511090000000000000e05070705050507050a0000000000000e0705050706050505090000000000000f05060607070705050a0000000000000f0605070705070506090000000000000d0c0b0c0c0b0c0b0c04000000000000080210020808021002080000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000012000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000`, img`
+2 2 2 2 2 2 2 2 2 2 . . . . . . 
+2 . . . . . . . . 2 . . . . . . 
+2 . . . . . . . . 2 . . . . . . 
+2 . . . . . . . . 2 . . . . . . 
+2 . . . . . . . . 2 . . . . . . 
+2 . . . . . . . . 2 . . . . . . 
+2 2 2 2 2 2 2 2 2 2 . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+`, [myTiles.transparency16,sprites.dungeon.greenOuterNorthWest,sprites.dungeon.greenOuterNorth0,sprites.dungeon.greenOuterNorthEast,sprites.dungeon.greenOuterSouthWest,sprites.dungeon.floorDark0,sprites.dungeon.floorDark1,sprites.dungeon.floorDark4,sprites.dungeon.greenOuterNorth1,sprites.dungeon.greenOuterEast0,sprites.dungeon.greenOuterEast1,sprites.dungeon.greenOuterSouth0,sprites.dungeon.greenOuterSouth1,sprites.dungeon.greenOuterSouthEast,sprites.dungeon.greenOuterWest1,sprites.dungeon.greenOuterWest0,sprites.dungeon.greenOuterNorth2,sprites.dungeon.chestClosed,sprites.dungeon.doorClosedEast,sprites.dungeon.doorClosedNorth], TileScale.Sixteen)</field><next><block type="variables_set" id="b%(80jmkCxAyiwh#:GOa"><field name="VAR" id="W0s8yd@NWXDE)vw%RpQp">hero</field><value name="VALUE"><shadow xmlns="http://www.w3.org/1999/xhtml" type="math_number"><field name="NUM">0</field></shadow><block type="spritescreate" id="(lH.w]V+.]S~O*;3[u:/"><value name="img"><shadow type="screen_image_picker" id=",F_+nks`:jW~vMCCNbkk"><field name="img">img`
+. . . . f f f f . . . . . 
+. . f f f f f f f f . . . 
+. f f f f f f c f f f . . 
+f f f f f f c c f f f c . 
+f f f c f f f f f f f c . 
+c c c f f f e e f f c c . 
+f f f f f e e f f c c f . 
+f f f b f e e f b f f f . 
+. f 4 1 f 4 4 f 1 4 f . . 
+. f e 4 4 4 4 4 4 e f . . 
+. f f f e e e e f f f . . 
+f e f b 7 7 7 7 b f e f . 
+e 4 f 7 7 7 7 7 7 f 4 e . 
+e e f 6 6 6 6 6 6 f e e . 
+. . . f f f f f f . . . . 
+. . . f f . . f f . . . . 
+`</field></shadow></value><value name="kind"><shadow type="spritekind" id="]AWdEswTV.FSCE7V/%@y"><field name="MEMBER">Player</field></shadow></value></block></value><next><block type="game_control_sprite" id="3$jiV]P0eSsV(uUZlAun"><mutation xmlns="http://www.w3.org/1999/xhtml" _expanded="0" _input_init="false"></mutation><value name="sprite"><block type="variables_get" id="jXD5`N^?98rCFM~|Sxn."><field name="VAR" id="W0s8yd@NWXDE)vw%RpQp">hero</field></block></value><next><block type="variables_set" id="Z[J|maz2(Z/7VAAzjl_d"><field name="VAR" id="KE=(:KqUa2CS`5u?)^10">key</field><value name="VALUE"><shadow type="math_number"><field name="NUM">0</field></shadow><block type="logic_boolean" id="EbA=+9d8AFWkWY[E.:Ba"><field name="BOOL">FALSE</field></block></value></block></next></block></next></block></next></block></statement></block><block type="gameupdate" id="2Dv=-4^e8@j@OF_(:;PK" x="1110" y="110"><statement name="HANDLER"><block type="controls_if" id="y##c`Vh$TFMwm%.JMgH,"><value name="IF0"><shadow type="logic_boolean"><field name="BOOL">TRUE</field></shadow><block type="spritetileat" id="9z{[=a80H!XIBw+HB9e)"><field name="direction">TileDirection.Top</field><value name="this"><block type="variables_get" id="f^~h^Eg5Moxn:K#C87iH"><field name="VAR" id="W0s8yd@NWXDE)vw%RpQp">hero</field></block></value><value name="tile"><shadow type="tileset_tile_picker" id="o+.Y|Mz[X,6{(Bw=F7T6"><field name="tile">sprites.dungeon.doorClosedNorth</field></shadow></value></block></value><statement name="DO0"><block type="controls_if" id="jwL1uX`fy|WOC,0^]}E)"><value name="IF0"><shadow type="logic_boolean"><field name="BOOL">TRUE</field></shadow><block type="keyispressed" id="@_mrjC-cLplkSRxHd74p"><field name="button">controller.A</field></block></value><statement name="DO0"><block type="controls_if" id="zJ_9XAafWpNW*}qqh1tL"><mutation else="1"/><value name="IF0"><shadow type="logic_boolean"><field name="BOOL">TRUE</field></shadow><block type="variables_get" id="l{05}UT,3^h%+21Sx/WF"><field name="VAR" id="KE=(:KqUa2CS`5u?)^10">key</field></block></value><statement name="DO0"><block type="game_show_long_text" id=".]zM_Q[]?Sh?igB;vgzI"><field name="layout">DialogLayout.Bottom</field><value name="str"><shadow type="text" id="cp?q/]cV+@WkTK1wdp||"><field name="TEXT">だっしゅつ せいこう</field></shadow></value></block></statement><statement name="ELSE"><block type="game_show_long_text" id="lA3aD!4`,]1~tbLzP9=:"><field name="layout">DialogLayout.Bottom</field><value name="str"><shadow type="text" id="P$W~(C%=4flj*wO!M1A?"><field name="TEXT">かぎ が かかっている</field></shadow></value></block></statement></block></statement></block></statement></block></statement></block><block type="game_show_long_text" id="*(DG]r]y1ASIZN-(.Sv`" disabled="true" x="1170" y="770"><field name="layout">DialogLayout.Bottom</field><value name="str"><shadow type="text" id="OCB8!;YWp+3V,e@_rQA~" disabled="true"><field name="TEXT">かぎ が かかっている</field></shadow></value></block><block type="device_pause" id="v-{,CY]v~JN[axgj9E.Q" disabled="true" x="70" y="1010"><value name="pause"><shadow type="timePicker" id="awa{4?ZPaEIhAS:1F}Qn" disabled="true"><field name="ms">1000</field></shadow></value></block><block type="game_dialog_set_frame" id="Mn::pjs`UKmf9?Z~FIus" disabled="true" x="570" y="1050"><value name="frame"><shadow type="dialog_image_picker" id="T/2(3bG#!;CtZ0Pr*poh" disabled="true"><field name="img">img`
+. . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . 
+`</field></shadow></value></block><block type="spritetileat" id="MMqk.GCss4|wqQrqJF!y" disabled="true" x="1250" y="1030"><field name="direction">TileDirection.Top</field><value name="this"><block type="variables_get" id="}OD[qHFV#1$R3cx)peo#" disabled="true"><field name="VAR" id="W0s8yd@NWXDE)vw%RpQp">hero</field></block></value><value name="tile"><shadow type="tileset_tile_picker" id="LfqfWsjkDiOn3K;un*:Q" disabled="true"><field name="tile">sprites.dungeon.doorClosedNorth</field></shadow></value></block></xml>
