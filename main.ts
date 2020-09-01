@@ -1,12 +1,19 @@
 scene.onOverlapTile(SpriteKind.Player, sprites.dungeon.chestClosed, function (sprite, location) {
     if (controller.A.isPressed()) {
-        game.showLongText("かぎ を てにいれた！", DialogLayout.Bottom)
-        key = true
-        tiles.setTileAt(location, sprites.dungeon.chestOpen)
+        game.showLongText("みぎ２ した４", DialogLayout.Bottom)
+    }
+})
+scene.onOverlapTile(SpriteKind.Player, sprites.dungeon.floorDark1, function (sprite, location) {
+    if (controller.A.isPressed()) {
+        if (!(key)) {
+            music.baDing.play()
+            game.showLongText("かぎ を てにいれた！", DialogLayout.Bottom)
+            key = true
+        }
     }
 })
 let key = false
-tiles.setTilemap(tiles.createTilemap(hex`10001000010202080212020802030000000000000f0605070605060507090000000000000e05070705050507050a0000000000000e0705050706050505090000000000000f05060607070705050a0000000000000f1105070705070506090000000000000d0c0b0c0c0b0c0b0c04000000000000080210020808021002080000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000`, img`
+tiles.setTilemap(tiles.createTilemap(hex`10001000010202080212020802030000000000000f1105070705070507090000000000000e05070705050507050a0000000000000e0705050707050505090000000000000f05070707070707050a0000000000000f0705060705070507090000000000000d0c0b0c0c0b0c0b0c04000000000000080210020808021002080000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000`, img`
     2 2 2 2 2 2 2 2 2 2 . . . . . . 
     2 . . . . . . . . 2 . . . . . . 
     2 . . . . . . . . 2 . . . . . . 
@@ -42,6 +49,9 @@ let hero = sprites.create(img`
     . . . f f f f f f . . . . 
     . . . f f . . f f . . . . 
     `, SpriteKind.Player)
+game.showLongText("うえの とびらを あけて", DialogLayout.Bottom)
+game.showLongText("この へやから", DialogLayout.Bottom)
+game.showLongText("だっしゅつ しよう！", DialogLayout.Bottom)
 controller.moveSprite(hero)
 key = false
 game.onUpdate(function () {
